@@ -12,9 +12,9 @@ class App extends Component {
     }
     render() {
         return (
-            <div className="drop-main">
+            <div className="container">
                 <LayoutComponent />
-                <div className="drop-area"> Sample </div>
+                <div className="drop-area col-lg-6"> drop here </div>
             </div>
         );
     }

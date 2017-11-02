@@ -92,8 +92,62 @@ a:hover {
 .drop {
     float: left;
 }
+
 .drop-area {
-    width: 300px;
-    height:300px;
+    padding: 10px;
+    height: 380px;
+    text-align: center;
+    vertical-align: middle;
     background-color: #cccccc;
+}
+
+.drop-main {
+    float: left;
+}
+
+input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+#profile-image1 {
+    cursor: pointer;
+
+    width: 100px;
+    height: 100px;
+    border: 2px solid #03b1ce;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bot-border {
+    border-bottom: 1px #f8f8f8 solid;
+    margin: 5px 0 5px 0
+}
+
+.image-group {
+    text-align: center;
+}
+
+.hr-style {
+    margin: 5px 0 5px 0;
+}
+
+.profile-name {
+    color: #00b1b1;
+}
+
+.editable-input {
+    width: 85%;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group .btn {
+    margin-right: 20px;
 }

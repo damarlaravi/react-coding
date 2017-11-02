@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 export default class EditableLabel extends Component {
     constructor(props) {
         super(props);
+        this.textEnter = false;
         this.textValue = props.text;
 
         this.state = {
@@ -18,8 +19,9 @@ export default class EditableLabel extends Component {
 
     labelClicked() {
         this.setState({editing: true});
-        if (this.state.text === this.textValue)
-            this.setState({text: this.state.text + ' kumar '});
+        if (this.state.text === this.textValue) {
+            this.setState({text: this.state.text + 'michalczwarno'});
+        }
         else
             this.setState({text: this.state.text});
     }
@@ -30,17 +32,19 @@ export default class EditableLabel extends Component {
 
     inputLostFocus() {
         this.setState({editing: false});
-        if (this.state.text === this.textValue)
+        if (!this.textEnter) {
             this.setState({text: this.textValue});
+        }
 
         this.props.onTextUpdate(this.state.text);
-        //console.log(" This is in editable component ", this.state.text);
     }
 
     keyPressed(event) {
         if (event.key === 'Enter') {
+            this.textEnter = false;
             this.inputLostFocus();
         }
+        this.textEnter = true;
     }
 
     render() {
@@ -48,6 +52,7 @@ export default class EditableLabel extends Component {
             return <input
                 ref='textInput'
                 type='text'
+                className="editable-input"
                 onChange={this.textChanged}
                 onBlur={this.inputLostFocus}
                 onKeyPress={this.keyPressed}

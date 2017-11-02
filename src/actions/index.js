@@ -12,7 +12,7 @@ export function getProfileData() {
     const response = {
         "id": 1,
         "name": "Ravi",
-        "Title": "Remote Developer",
+        "title": "Remote Developer",
         "profile": "https://www.linkedin.com/in/",
         "selectionData": [ "Champion", "Friend", "Neutral", "Negative", "Competitive camp"]
     };
