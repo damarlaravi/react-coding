@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import LayoutComponent from './layout';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {getProfileData} from '../actions/index';
-
+import reactDragula from 'react-dragula';
 class App extends Component {
     constructor(props){
         super(props);
@@ -11,8 +12,16 @@ class App extends Component {
     }
     render() {
         return (
-            <LayoutComponent />
+            <div className="drop-main">
+                <LayoutComponent />
+                <div className="drop-area"> Sample </div>
+            </div>
         );
+    }
+
+    componentDidMount() {
+        let container = ReactDOM.findDOMNode(this);
+        reactDragula([container]);
     }
 }
 

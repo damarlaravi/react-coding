@@ -1,10 +1,10 @@
 //import axios from 'axios';
-import SampleData from './data';
+//import SampleData from './data';
 
 /*
     this function call's when click on Save button, from here will make service call
  */
-const ROOT_URL = `http://localhost:8080/data/index.json`;
+//const ROOT_URL = `http://localhost:8080/data/index.json`;
 export const EDIT_FORM = 'EDIT_FORM';
 export const READ_DATA = "READ_DATA";
 
